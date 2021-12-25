@@ -1,0 +1,485 @@
+@import "_global.scss";
+@import "_header.scss";
+@import "_slider.scss";
+@import "_footer.scss";
+//  Переменные
+$rem: 16;
+$width: 1440;
+
+/* Тело страниц сайта
+   Style CSS
+ * --------------------------------------- */
+
+//*
+//*
+//*
+//*
+//* Главная страница
+//*
+//*
+//*
+//*
+.non {
+    display: none;
+}
+
+
+/* Стили блока сортировки товаров на главной странице */
+
+.cards-filter {
+    width: 100%;
+    &__heading {
+        font-family: Myriab-Pro-Semibold;
+        font-size: 28rem / $rem;
+        margin: 50px 0 15px 0;
+        font-weight: 200;
+        & span {
+            font-weight: 800;
+        }
+    }
+    &__filter-btn {
+        // !Стили фильтра
+    }
+    &__card {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__all {
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & a {
+            font-family: Myriab-Pro-Semibold;
+            font-size: 18rem / $rem;
+            color: #fff;
+            padding: 10em / $rem 24em / $rem;
+            background-color: #a21300;
+            border-radius: 15px;
+        }
+    }
+}
+
+
+/* Стили блока видео */
+
+.video-mainers {
+    margin-top: 95px;
+    width: 100%;
+    display: flex;
+    &__text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-right: 20px;
+        text-align: right;
+        & h3 {
+            & span {
+                font-weight: 800;
+            }
+            font-family: Myriab-Pro-Semibold;
+            font-size: 28rem / $rem;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+        & p {
+            font-family: Myriab-Pro-Semibold;
+            font-size: 18rem / $rem;
+            line-height: 25px;
+            font-weight: 400;
+        }
+    }
+    &__video {
+        width: 50%;
+        margin-left: 20px;
+        & iframe {
+            border-radius: 15px;
+            width: 450px;
+            height: 277px;
+        }
+    }
+}
+
+
+/* Блок текста */
+
+.about-text {
+    margin-top: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__img {
+        overflow: hidden;
+        width: 77px;
+        margin-bottom: 17px;
+        & img {
+            width: 100%;
+        }
+    }
+    & h3 {
+        font-size: 28rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+        font-weight: 400;
+        margin-bottom: 25px;
+        & span {
+            font-weight: 800;
+        }
+    }
+    & p {
+        width: 80%;
+        font-family: Myriab-Pro-Semibold;
+        font-size: 18rem / $rem;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+
+/* Блок брендов */
+
+.brand-logo {
+    margin-top: 125px;
+    width: calc(100% - 4px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px #b1b1b1;
+    border-radius: 20px;
+    height: 110px;
+    &__logo {
+        &-1 {
+            width: 175px;
+            overflow: hidden;
+            & img {
+                width: 100%;
+            }
+        }
+        &-2 {
+            width: 165px;
+            & img {
+                width: 100%;
+            }
+        }
+        &-3 {
+            width: 145px;
+            margin-top: 15px;
+            & img {
+                width: 100%;
+            }
+        }
+        &-4 {
+            width: 150px;
+            & img {
+                width: 100%;
+            }
+        }
+        &-5 {
+            width: 190px;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/* Стили слайдера комментария */
+
+.comments-slider {
+    width: 100%;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: column;
+    &__heading {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img {
+            margin-bottom: 25px;
+        }
+        & p {
+            font-size: 28rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            font-weight: 400;
+            margin-bottom: 15px;
+            & span {
+                font-weight: 800;
+            }
+        }
+        &__comments {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__comment {
+        margin: 0 20px;
+    }
+}
+
+//*
+//*
+//*
+//*
+//* Страница товара
+//*
+//*
+//*
+//*
+.product-top {
+    width: 100%;
+    display: flex;
+    @media screen and (max-width: 769px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 332px;
+        height: 363px;
+        border: solid 2px #b1b1b1;
+        border-radius: 20px;
+        @media screen and (max-width: 769px) {
+            width: 410px;
+            height: 485px;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 426px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 321px) {
+            height: 360px;
+        }
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 769px) {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        @media screen and (max-width: 426px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__spead {
+        width: 100%;
+        &-img {
+            height: 19px;
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+        &-text {
+            font-weight: 600;
+            font-size: 15rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+        }
+    }
+    &__product-img {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @media screen and (max-width: 769px) {
+            height: 300px;
+        }
+    }
+    &__name {
+        margin-bottom: 47px;
+        font-family: Myriab-Pro-Semibold;
+        font-size: 28rem / $rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__contact {
+        margin-top: 48px;
+        & h3 {
+            font-family: Myriab-Pro-Semibold;
+            font-size: 24rem / $rem;
+            font-weight: 700;
+        }
+        @media screen and (max-width: 769px) {
+            margin-top: 0;
+        }
+    }
+    &__contact-bottom {
+        display: flex;
+        margin-top: 17px;
+        & p {
+            margin-left: 13px;
+            font-family: Myriab-Pro-Semibold;
+            font-size: 17rem / $rem;
+            font-weight: 800;
+            & span {
+                font-weight: 200;
+            }
+        }
+    }
+    &__fon {
+        overflow: hidden;
+        width: 38px;
+        & img {
+            width: 100%;
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        width: 828px;
+        margin-left: 38px;
+        @media screen and (max-width: 1260px) {
+            margin-left: 30vw / 1260 * 100;
+            width: 828% / 1260 * 100;
+            min-width: 785px;
+        }
+        @media screen and (max-width: 1025px) {
+            margin-left: 15vw / 1260 * 100;
+            min-width: 645px;
+        }
+        @media screen and (max-width: 769px) {
+            flex-direction: column;
+            margin-top: 60px;
+            margin-left: 0;
+            width: 100%;
+        }
+        @media screen and (max-width: 769px) {
+            min-width: auto;
+        }
+    }
+    &__info-left {
+        width: 350px;
+        @media screen and (max-width: 1025px) {
+            width: 350px;
+        }
+        @media screen and (max-width: 769px) {
+            width: 100%;
+        }
+    }
+    &__inf {
+        font-size: 18rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+        line-height: 28px;
+        & span {
+            font-weight: 200;
+            color: #8a8a8a;
+        }
+    }
+    &__price {
+        font-family: Myriab-Pro-Semibold;
+        color: #a21300;
+        font-size: 24rem / $rem;
+        line-height: 38px;
+    }
+    &__shipping {
+        font-weight: 100;
+        font-family: Myriab-Pro-Semibold;
+        color: #727272;
+        background-color: #d7d7d7;
+        font-size: 14rem / $rem;
+        padding: 10em / $rem 27em / $rem;
+        margin-bottom: 25px;
+    }
+    &__line {
+        height: 100%;
+        width: 2px;
+        background-color: #d7d7d7;
+        @media screen and (max-width: 769px) {
+            height: 2px;
+            width: 100%;
+            margin: 30px 0;
+        }
+    }
+    &__info-right {
+        width: 420px;
+        @media screen and (max-width: 1025px) {
+            width: 260px;
+        }
+        @media screen and (max-width: 769px) {
+            width: 100%;
+        }
+    }
+    &__des {
+        margin-bottom: 35px;
+        & h3 {
+            font-size: 21rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            color: #a21300;
+            margin-bottom: 12em / $rem;
+        }
+        & p {
+            font-size: 15rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+        }
+    }
+    &__spec {
+        & li {
+            display: flex;
+        }
+        & h3 {
+            font-size: 21rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            color: #a21300;
+            margin-bottom: 12em / $rem;
+        }
+        & div {
+            margin-left: 11px;
+            margin-right: 11px;
+            margin-top: 1.1em;
+            flex-grow: 1;
+            height: 1px;
+            background-color: #727272;
+        }
+        & p {
+            line-height: 30em / $rem;
+            font-size: 15rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+        }
+    }
+}
+
+.processing {
+    margin-top: 75px;
+    width: 100%;
+    border: solid 2px #b1b1b1;
+    border-radius: 20px;
+    & div {
+        margin: 25px 40px;
+        @media screen and (max-width: 426px) {
+            margin: 15px 20px;
+        }
+    }
+    & h3 {
+        font-family: Myriab-Pro-Semibold;
+        font-size: 28rem / $rem;
+        margin-bottom: 17px;
+    }
+    & p {
+        font-size: 15rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+    }
+}
