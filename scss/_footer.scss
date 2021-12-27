@@ -1,0 +1,162 @@
+$rem: 16;
+$width: 1440;
+
+/* Стили подвала сайта 
+   footre CSS
+*--------------------------------------------------- */
+
+.footer {
+    width: 100%;
+    background-color: #000;
+    &__wrap {
+        height: 260px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        @media screen and (max-width: 1170px) {
+            width: 33%;
+        }
+        @media screen and (max-width: 1070px) {
+            width: 30%;
+        }
+        @media screen and (max-width: 900px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 769px) {
+            width: 60%;
+        }
+        @media screen and (max-width: 695px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+    &__logo {
+        display: flex;
+        margin: 60px 0;
+        & div {
+            width: 200px;
+            overflow: hidden;
+            & img {
+                position: relative;
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            margin: 30px 0;
+        }
+    }
+    &__text {
+        font-size: 14rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+        color: #fff;
+        width: 345px;
+        @media screen and (max-width: 1150px) {
+            width: 90%;
+        }
+        @media screen and (max-width: 900px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 990px) {
+            width: 100%;
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        @media screen and (max-width: 1170px) {
+            width: 67%;
+        }
+        @media screen and (max-width: 1070px) {
+            width: 70%;
+        }
+        @media screen and (max-width: 769px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 695px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+    &__nav .top-nav__nav {
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+    &__nav {
+        @media screen and (max-width: 900px) {
+            justify-content: flex-end;
+        }
+    }
+    &__num {
+        display: flex;
+        justify-content: flex-end;
+        margin: 50px 0;
+        text-align: right;
+        & a {
+            color: #fff;
+            font-size: 30rem / $rem;
+            line-height: 50rem / $rem;
+            font-family: Arhive;
+            margin-right: 0;
+        }
+        @media screen and (max-width: 600px) {
+            margin: 20px 0;
+            justify-content: flex-start;
+            & a {
+                font-size: 25rem / $rem;
+                line-height: 50rem / $rem;
+            }
+        }
+    }
+    &__fon {
+        & img {
+            filter: invert(100);
+        }
+    }
+    &__nav-ul {
+        & li .top-nav__nav-a {
+            padding: 0 39px;
+            @media screen and (max-width: 1260px) {
+                padding: 0 30px;
+            }
+            @media screen and (max-width: 1006px) {
+                padding: 0 20px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+    &__nav-ul li:last-child .top-nav__nav-a {
+        padding-right: 0;
+    }
+    &__nav-ul li:first-child .top-nav__nav-a {
+        padding-left: 0;
+    }
+    &__register {
+        @media screen and (max-width: 769px) {
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+    &__register li:last-child .top-nav__nav-a {
+        padding-right: 0;
+    }
+}
