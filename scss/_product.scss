@@ -1,0 +1,398 @@
+/*  Стили страницы товара
+    product SCSS
+ * --------------------------------------- */
+
+.product-top {
+    width: 100%;
+    display: flex;
+    @media screen and (max-width: 950px) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 769px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 332px;
+        height: 363px;
+        border: solid 2px #b1b1b1;
+        border-radius: 20px;
+        @media screen and (max-width: 1150px) {
+            width: 28.523vw;
+            height: 31.218vw;
+        }
+        @media screen and (max-width: 950px) {
+            width: 500px;
+            height: 600px;
+        }
+        @media screen and (max-width: 769px) {
+            width: 100%;
+            height: 111vw;
+        }
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 950px) {
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: solid 2px #b1b1b1;
+        }
+        @media screen and (max-width: 769px) {
+            width: 100%;
+        }
+    }
+    &__spead {
+        width: 100%;
+        &-img {
+            height: 19px;
+            margin-top: 15px;
+            margin-left: 25px;
+            @media screen and (max-width: 950px) {
+                height: 35px;
+            }
+        }
+        &-text {
+            font-weight: 600;
+            font-size: 15rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            @media screen and (max-width: 1101px) {
+                font-size: 13rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 10rem / $rem;
+            }
+        }
+    }
+    &__product-img {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @media screen and (max-width: 950px) {
+                width: auto;
+                object-fit: cover;
+                height: 100%;
+                margin: 0 auto;
+                left: auto;
+            }
+        }
+        @media screen and (max-width: 1150px) {
+            height: 50%;
+        }
+    }
+    &__name {
+        margin-bottom: 47px;
+        font-family: Myriab-Pro-Semibold;
+        font-size: 28rem / $rem;
+        font-weight: 700;
+        text-align: center;
+        @media screen and (max-width: 1101px) {
+            font-size: 23rem / $rem;
+        }
+        @media screen and (max-width: 950px) {
+            font-size: 45rem / $rem;
+        }
+        @media screen and (max-width: 376px) {
+            font-size: 33rem / $rem;
+        }
+    }
+    &__contact {
+        margin-top: 48px;
+        & h3 {
+            font-family: Myriab-Pro-Semibold;
+            font-size: 24rem / $rem;
+            font-weight: 700;
+            @media screen and (max-width: 1101px) {
+                font-size: 20rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 18rem / $rem;
+            }
+        }
+    }
+    &__contact-bottom {
+        display: flex;
+        margin-top: 17px;
+        & p {
+            margin-left: 13px;
+            font-family: Myriab-Pro-Semibold;
+            font-size: 17rem / $rem;
+            font-weight: 800;
+            @media screen and (max-width: 1101px) {
+                font-size: 15rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 12rem / $rem;
+            }
+            & span {
+                font-weight: 200;
+            }
+        }
+    }
+    &__fon {
+        overflow: hidden;
+        width: 38px;
+        & img {
+            width: 100%;
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        min-width: 828px;
+        margin-left: 38px;
+        @media screen and (max-width: 1260px) {
+            margin-left: 2vw;
+        }
+        @media screen and (max-width: 1210px) {
+            min-width: auto;
+            width: 760px;
+        }
+        @media screen and (max-width: 950px) {
+            flex-direction: row-reverse;
+            width: 100%;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 769px) {
+            flex-direction: column;
+        }
+    }
+    &__info-left {
+        width: 350px;
+        @media screen and (max-width: 1101px) {
+            width: 300px;
+        }
+        @media screen and (max-width: 950px) {
+            width: 45%;
+        }
+        @media screen and (max-width: 769px) {
+            width: 100%;
+        }
+    }
+    &__inf {
+        font-size: 18rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+        line-height: 28px;
+        @media screen and (max-width: 1101px) {
+            font-size: 16rem / $rem;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 13rem / $rem;
+        }
+        & span {
+            font-weight: 200;
+            color: #8a8a8a;
+        }
+    }
+    &__price {
+        font-family: Myriab-Pro-Semibold;
+        color: #a21300;
+        font-size: 24rem / $rem;
+        line-height: 38px;
+        @media screen and (max-width: 1101px) {
+            font-size: 20rem / $rem;
+        }
+    }
+    &__shipping {
+        font-weight: 100;
+        font-family: Myriab-Pro-Semibold;
+        color: #727272;
+        background-color: #d7d7d7;
+        font-size: 14rem / $rem;
+        padding: 10em / $rem 27em / $rem;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        @media screen and (max-width: 1101px) {
+            font-size: 11rem / $rem;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 8rem / $rem;
+        }
+    }
+    &__line {
+        height: 100%;
+        width: 2px;
+        background-color: #d7d7d7;
+        @media screen and (max-width: 950px) {
+            height: auto;
+        }
+    }
+    &__info-right {
+        width: 420px;
+        @media screen and (max-width: 1210px) {
+            width: 360px;
+        }
+        @media screen and (max-width: 1101px) {
+            width: 300px;
+        }
+        @media screen and (max-width: 950px) {
+            width: 45%;
+        }
+        @media screen and (max-width: 769px) {
+            width: 100%;
+        }
+    }
+    &__des {
+        margin-bottom: 35px;
+        & h3 {
+            font-size: 21rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            color: #a21300;
+            margin-bottom: 12em / $rem;
+            @media screen and (max-width: 1101px) {
+                font-size: 18rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 16rem / $rem;
+            }
+        }
+        & p {
+            font-size: 15rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            @media screen and (max-width: 1101px) {
+                font-size: 12rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 10rem / $rem;
+            }
+        }
+    }
+    &__spec {
+        & li {
+            display: flex;
+        }
+        & h3 {
+            font-size: 21rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            color: #a21300;
+            margin-bottom: 12em / $rem;
+            @media screen and (max-width: 1101px) {
+                font-size: 17rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 15rem / $rem;
+            }
+        }
+        & div {
+            margin-left: 11px;
+            margin-right: 11px;
+            margin-top: 1.1em;
+            flex-grow: 1;
+            height: 1px;
+            background-color: #727272;
+        }
+        & p {
+            line-height: 30em / $rem;
+            font-size: 15rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            @media screen and (max-width: 1101px) {
+                font-size: 12rem / $rem;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 10rem / $rem;
+            }
+        }
+    }
+}
+
+.processing {
+    margin-bottom: 50px;
+    margin-top: 75px;
+    width: 100%;
+    border: solid 2px #b1b1b1;
+    border-radius: 20px;
+    & div {
+        margin: 25px 40px;
+        @media screen and (max-width: 426px) {
+            margin: 15px 20px;
+        }
+    }
+    & h3 {
+        font-family: Myriab-Pro-Semibold;
+        font-size: 28rem / $rem;
+        margin-bottom: 17px;
+        @media screen and (max-width: 1101px) {
+            font-size: 24rem / $rem;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 20rem / $rem;
+        }
+    }
+    & p {
+        font-size: 15rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+        @media screen and (max-width: 1101px) {
+            font-size: 12rem / $rem;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 10rem / $rem;
+        }
+    }
+}
+
+.social-blok {
+    width: calc(100% - 80px);
+    height: 105px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px #b1b1b1;
+    border-radius: 25px;
+    margin-top: 90px;
+    margin-bottom: 130px;
+    @media screen and (max-width: 1101px) {
+        margin-top: 60px;
+        margin-bottom: 90px;
+    }
+    @media screen and (max-width: 769px) {
+        justify-content: center;
+    }
+    &__text {
+        font-family: Myriab-Pro-Semibold;
+        font-size: 24rem / $rem;
+        @media screen and (max-width: 1101px) {
+            font-size: 21rem / $rem;
+        }
+        @media screen and (max-width: 769px) {
+            display: none;
+        }
+    }
+    &__links {
+        & ul {
+            display: flex;
+            & li {
+                margin-left: 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                & a {
+                    overflow: hidden;
+                    width: 35px;
+                    position: relative;
+                    display: block;
+                    & img {
+                        width: 100%;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}

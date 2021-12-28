@@ -1,0 +1,58 @@
+/* Стили контактов
+   contact SCSS
+*--------------------------------------------------- */
+
+.contact-us {
+    @media screen and (max-width: 426px) {
+        margin: 3%;
+    }
+    &__block {}
+    &__pretext {
+        margin-bottom: 2%;
+        & h2 {
+            font-weight: bold;
+            font-size: 28rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            @media screen and (max-width: 426px) {
+                font-size: 20rem / $rem;
+            }
+        }
+        & h2:before {
+            content: url(../img/contact/homik.png);
+            padding-right: 15px;
+            @media screen and (max-width: 426px) {
+                font-size: 20rem / $rem;
+            }
+        }
+    }
+    &__text {
+        max-width: 453px;
+        width: 100%;
+        margin-bottom: 2%;
+        font-family: Myriab-Pro-Semibold;
+        font-size: 14rem / $rem;
+        @media screen and (max-width: 426px) {
+            max-width: 310px;
+        }
+    }
+    &__icons {
+        margin-bottom: 5%;
+        display: flex;
+        & a {
+            display: block;
+            height: 35px;
+            width: 35px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 4px;
+            & img {
+                width: 100%;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.contact-map {
+    width: 100vw;
+}

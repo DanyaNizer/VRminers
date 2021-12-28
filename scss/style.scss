@@ -1,0 +1,316 @@
+// Подключение дочерних стилей
+@import "_global.scss";
+@import "_header.scss";
+@import "_slider.scss";
+@import "_product.scss";
+@import "_contact.scss";
+@import "_company.scss";
+@import "_footer.scss";
+//  Переменные
+$rem: 16;
+$width: 1440;
+
+/* Тело страниц сайта
+   Style CSS
+ * --------------------------------------- */
+
+//*
+//*
+//*
+//*
+//* Главная страница
+//*
+//*
+//*
+//*
+
+/* Стили блока сортировки товаров на главной странице */
+
+.cards-filter {
+    width: 100%;
+    &__heading {
+        font-family: Myriab-Pro-Semibold;
+        font-size: 28rem / $rem;
+        margin: 50px 0 15px 0;
+        font-weight: 200;
+        & span {
+            font-weight: 800;
+        }
+    }
+    &__filter-btn {
+        // !Стили фильтра
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        @media screen and (max-width: 769px) {
+            justify-content: space-around;
+        }
+    }
+    &__card {
+        margin: 0 auto 15px auto;
+        border: solid 2px #b1b1b1;
+        @media screen and (max-width: 1115px) {
+            margin: 0 8px 15px;
+        }
+        @media screen and (max-width: 600px) {
+            margin: 0 auto 15px auto;
+        }
+        transition: all 0.1s ease-out;
+        // &:hover {
+        //     border: solid 5px #b1b1b1;
+        //     width: 271px;
+        //     height: 394px;
+        //     transition: all 0.1s ease-out;
+        //     & .card {
+        //         &__spead {
+        //             margin-top: calc(5% - 3px);
+        //             transition: all 0.1s ease-out;
+        //         }
+        //         &__img {
+        //             width: calc(100% + 6px);
+        //             height: calc(44% + 6px);
+        //             transition: all 0.1s ease-out;
+        //         }
+        //         &__text {
+        //             min-width: 75%;
+        //             max-width: 90%;
+        //         }
+        //         &__price {
+        //             width: 100%;
+        //             height: 12%;
+        //             margin-top: 6%;
+        //         }
+        //         &__pr {
+        //             width: 75%;
+        //             margin-bottom: calc(6% - 3px);
+        //             transition: all 0.1s ease-out;
+        //         }
+        //     }
+        // }
+    }
+    &__all {
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & a {
+            font-family: Myriab-Pro-Semibold;
+            font-size: 18rem / $rem;
+            color: #fff;
+            padding: 10em / $rem 24em / $rem;
+            background-color: #a21300;
+            border-radius: 15px;
+        }
+    }
+}
+
+
+/* Стили блока видео */
+
+.video-mainers {
+    margin-top: 95px;
+    width: 100%;
+    display: flex;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+    &__text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-right: 20px;
+        text-align: right;
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            text-align: left;
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        & h3 {
+            & span {
+                font-weight: 800;
+            }
+            font-family: Myriab-Pro-Semibold;
+            font-size: 28rem / $rem;
+            margin-bottom: 5px;
+            font-weight: 400;
+            @media screen and (max-width: 600px) {
+                font-size: 24rem / $rem;
+            }
+            @media screen and (max-width: 900px) {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        & p {
+            font-family: Myriab-Pro-Semibold;
+            font-size: 18rem / $rem;
+            line-height: 25px;
+            font-weight: 400;
+            @media screen and (max-width: 600px) {
+                font-size: 16rem / $rem;
+            }
+        }
+    }
+    &__video {
+        width: 50%;
+        margin-left: 20px;
+        @media screen and (max-width: 900px) {
+            margin-left: 0px;
+            width: 100%;
+        }
+        & iframe {
+            border-radius: 15px;
+            width: 450px;
+            height: 277px;
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                height: 40vw;
+            }
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                height: 50vw;
+            }
+        }
+    }
+}
+
+
+/* Блок текста */
+
+.about-text {
+    margin-top: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__img {
+        overflow: hidden;
+        width: 77px;
+        margin-bottom: 17px;
+        & img {
+            width: 100%;
+        }
+    }
+    & h3 {
+        font-size: 28rem / $rem;
+        font-family: Myriab-Pro-Semibold;
+        font-weight: 400;
+        margin-bottom: 25px;
+        @media screen and (max-width: 600px) {
+            font-size: 24rem / $rem;
+        }
+        & span {
+            font-weight: 800;
+        }
+    }
+    & p {
+        width: 80%;
+        font-family: Myriab-Pro-Semibold;
+        font-size: 18rem / $rem;
+        line-height: 20px;
+        font-weight: 400;
+        @media screen and (max-width: 600px) {
+            font-size: 16rem / $rem;
+        }
+    }
+}
+
+
+/* Блок брендов */
+
+.brand-logo {
+    margin-top: 125px;
+    width: calc(100% - 4px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px #b1b1b1;
+    border-radius: 20px;
+    height: 110px;
+    // display: none;
+    &__logo {
+        &-1 {
+            width: 175px;
+            overflow: hidden;
+            & img {
+                width: 100%;
+            }
+        }
+        &-2 {
+            width: 165px;
+            & img {
+                width: 100%;
+            }
+        }
+        &-3 {
+            width: 145px;
+            & img {
+                width: 100%;
+            }
+        }
+        &-4 {
+            width: 150px;
+            & img {
+                width: 100%;
+            }
+        }
+        &-5 {
+            width: 190px;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/* Стили слайдера комментария */
+
+.comments-slider {
+    width: 100%;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    &__heading {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+        & img {
+            margin-bottom: 25px;
+        }
+        & p {
+            font-size: 28rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            font-weight: 400;
+            margin-bottom: 15px;
+            @media screen and (max-width: 600px) {
+                font-size: 24rem / $rem;
+            }
+            & span {
+                font-weight: 800;
+            }
+        }
+    }
+    &__comments {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        min-width: 0;
+    }
+    &__comment {
+        margin: 0 20px;
+    }
+}

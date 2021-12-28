@@ -1,0 +1,113 @@
+/* Стили страницы компании
+   company SCSS
+*--------------------------------------------------- */
+
+.company {
+    margin-bottom: 150px;
+    &__pretext {
+        margin-bottom: 20px;
+        & h2 {
+            font-weight: bold;
+            font-size: 28rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            @media screen and (max-width: 426px) {
+                font-size: 20rem / $rem;
+            }
+        }
+        & h2:before {
+            content: url(../img/contact/homik.png);
+            padding-right: 15px;
+            @media screen and (max-width: 426px) {
+                font-size: 20rem / $rem;
+            }
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        font-family: Myriab-Pro-Semibold;
+    }
+    &__img {
+        width: 550px;
+        float: left;
+        margin-right: 45px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 1000px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 675px) {
+            width: 100%;
+        }
+    }
+    &__text-p {
+        font-family: Myriab-Pro-Semibold;
+        font-size: 17.5rem / $rem;
+        & span {
+            display: block;
+            width: 100%;
+            font-size: 28rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.center-company {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__arrow {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    &__text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 45px;
+        & h4 {
+            font-size: 28rem / $rem;
+            font-family: Myriab-Pro-Semibold;
+        }
+    }
+}
+
+.video-company {
+    width: 100%;
+    &__video-blok {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media screen and (max-width: 1000px) {
+            justify-content: space-around;
+        }
+    }
+    &__video {
+        max-width: 385px;
+        max-height: 235px;
+        width: 30.556vw;
+        height: 18.652vw;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: 1000px) {
+            width: 385px;
+            height: 235px;
+        }
+        @media screen and (max-width: 850px) {
+            width: 45.295vw;
+            height: 27.648vw;
+        }
+        @media screen and (max-width: 426px) {
+            width: 100%;
+            height: 56vw;
+        }
+        & img {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
